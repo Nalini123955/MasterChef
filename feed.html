@@ -1,0 +1,143 @@
+<html lang="en">
+
+<head>
+    <title>FeedBack Page - FoodCook Planner </title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        🍊 FoodCook Planner
+        <a href="index.html" style="padding:2px 10px;font-size:10px;">Back</a>
+       
+    </header>
+
+    <main>
+  
+      <h4><span id="namegreet"></span>FeedBack Form</h4>
+      <style>
+        form{
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        form *{
+            margin:5px;
+            width:100%;
+        }
+        form input,
+            textarea{
+                padding: 5px 10px;
+                font-size:10px;
+                border:1px solid gainsboro;
+                border-radius:5px;
+            }
+        
+        form button{
+            padding:5px 10px;
+            background-color: royalblue;
+            border:none;
+            color:#fff;
+            border-radius:5px;
+        }
+        form label{
+            display: flex;
+            align-items:center;
+            font-size: 10px;
+            color:gray;
+            user-select:none;
+        }
+        form label input,
+        form input[type='radio']{
+            width:auto;
+        }
+        .d-flex{
+            display: flex;
+        }
+      </style>
+
+
+      <form name="feedback">
+        
+        <div class="fullname">
+            <input type="text"name="fullname" placeholder="Enter your Name" min="10"required>
+        </div>
+        <div class="d-flex">
+
+        <div class="d-flex" id="input-categories">
+            <input type="radio" name="type"id="general-feedback" value="general-feedback">
+            <label for="general-feedback">General Feedback</label>
+        </div>
+        <div class="d-flex">
+            <input type="radio" name="type"id="technical-support"value="technical-support">
+            <label for="technical-support">Technical Support</label>
+        </div>
+        <div class="d-flex">
+            <input type="radio" name="type"id="contribution" value="contribution">
+            <label for="contribution">Contribution</label>
+        </div>
+    </div>
+    <div class ="d-flex">
+    <div>
+        <input type="email" name="email"placeholder="you@upsdown.com"required>
+
+    </div>
+    <div>
+        <select name="country" id="country">
+            <option value="">--select country</option>
+             <option value="IND">India</option>
+             <option value="LK">Sri Lanka</option>
+             <option value="MYS">Malaysia</option>
+             <option value="SGP">Singapore</option>
+             <option value="THA">Thailand</option>
+        </select>
+    </div>
+    </div>
+    <div>
+        <textarea name="description"placeholder="Enter your FeedBack" rows="4"required></textarea>
+    </div>
+<div class="d-flex">
+    <div >
+        <label for="sing a songs">
+            <input type="checkbox"name="hobbies" id="singing"value="listening">
+            sing a songs
+        </label>
+    </div>
+    <div>
+        <label for="hering podcast">
+            <input type="checkbox"name="hobbies" id="learning"  value="hearing"checked>
+            hearing a podcast
+        </label>
+    </div>
+    <div>
+        <label for="write the journaling">
+            <input type="checkbox"name="hobbies" id="writing" value="focusing">
+            writing a Journaling
+        </label>
+    </div>
+<div>
+    <div>
+    <label for="checkbox" name="terms" id="terms"value="true"required>
+        <input type="checkbox">
+        I accept Terms and conditions.
+        
+    </label>
+</div>
+<div>
+    <button>Submit</button>
+</div>
+<div id="response"></div>
+
+      </form>
+    </main>
+
+    <!-- For Learning purpose -->
+    <script src="learn.js"></script>
+</body>
+</html>
